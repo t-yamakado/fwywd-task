@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 概要
+- fwywd採用試験の課題が自分のスキルセットと近かったため、お試しで作成
+	- https://fwywd.com/news/recruitment-1st
 
 ## Getting Started
 
