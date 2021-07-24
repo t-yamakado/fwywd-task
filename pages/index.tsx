@@ -20,9 +20,6 @@ export default function Home() {
 				<h1 className={styles.title}>
 					Welcome to <a href="https://nextjs.org">Next.js!</a>
 				</h1>
-				<button className="w-24 m-4 p-4 rounded-sm bg-red-500 text-center text-white">
-					テスト
-				</button>
 
 				<p className={styles.description}>
 					Get started by editing{" "}
