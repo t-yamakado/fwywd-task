@@ -26,45 +26,55 @@ export default function Home() {
 					Get started by editing{" "}
 					<code className={styles.code}>pages/index.js</code>
 				</p>
-
-				<div className={styles.grid}>
-					<a href="https://nextjs.org/docs" className={styles.card}>
-						<h2>Documentation &rarr;</h2>
-						<p>
-							Find in-depth information about Next.js features and
-							API.
-						</p>
-					</a>
-
-					<a href="https://nextjs.org/learn" className={styles.card}>
-						<h2>Learn &rarr;</h2>
-						<p>
-							Learn about Next.js in an interactive course with
-							quizzes!
-						</p>
-					</a>
-
-					<a
-						href="https://github.com/vercel/next.js/tree/master/examples"
-						className={styles.card}
-					>
-						<h2>Examples &rarr;</h2>
-						<p>
-							Discover and deploy boilerplate example Next.js
-							projects.
-						</p>
-					</a>
-
-					<a
-						href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-						className={styles.card}
-					>
-						<h2>Deploy &rarr;</h2>
-						<p>
-							Instantly deploy your Next.js site to a public URL
-							with Vercel.
-						</p>
-					</a>
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-4 gap-4">
+					<div className="bg-white shadow p-3 rounded lg:w-64">
+						<div>
+							<div
+								style={{ backgroundImage: `url('')` }}
+								className="bg-cover bg-center bg-gray-300 h-32 rounded"
+							></div>
+						</div>
+						<div className="mt-6">
+							<p className="text-lg text-bold tracking-wide text-gray-600 mb-2">
+								趣味
+							</p>
+							<p className="text-sm text-gray-600 font-hairline">
+								ここに趣味のことについて書きたいね。
+							</p>
+						</div>
+					</div>
+					<div className="bg-white shadow p-3 rounded lg:w-64">
+						<div>
+							<div
+								style={{ backgroundImage: `url('')` }}
+								className="bg-cover bg-center bg-gray-300 h-32 rounded"
+							></div>
+						</div>
+						<div className="mt-6">
+							<p className="text-lg text-bold tracking-wide text-gray-600 mb-2">
+								好きな食べ物
+							</p>
+							<p className="text-sm text-gray-600 font-hairline">
+								ここに食べ物のことについて書きたいね。
+							</p>
+						</div>
+					</div>
+					<div className="bg-white shadow p-3 rounded lg:w-64">
+						<div>
+							<div
+								style={{ backgroundImage: `url('')` }}
+								className="bg-cover bg-center bg-gray-300 h-32 rounded"
+							></div>
+						</div>
+						<div className="mt-6">
+							<p className="text-lg text-bold tracking-wide text-gray-600 mb-2">
+								性格
+							</p>
+							<p className="text-sm text-gray-600 font-hairline">
+								ここに性格のことについて書きたいね。
+							</p>
+						</div>
+					</div>
 				</div>
 			</main>
 
