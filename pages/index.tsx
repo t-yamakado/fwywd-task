@@ -1,12 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
 import { InformationCard } from "../components/InformationCard";
 import { informationList } from "../definitions/commonDefinitions";
-import styles from "../styles/Home.module.css";
 
 export default function Home() {
 	return (
-		<div className={styles.container}>
+		<div className="min-h-screen px-2 flex flex-col justify-center items-center h-screen">
 			<Head>
 				<title>Create Next App</title>
 				<meta
@@ -16,14 +14,14 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<main className={styles.main}>
-				<h1 className={styles.title}>
-					Welcome to <a href="https://nextjs.org">Next.js!</a>
+			<main className="py-20 flex-1 flex flex-col justify-center items-center">
+				<h1 className="text-center text-6xl">
+					Welcome to{" "}
+					<span className="text-green-500">Takana Mayo Page</span>
 				</h1>
 
-				<p className={styles.description}>
-					Get started by editing{" "}
-					<code className={styles.code}>pages/index.js</code>
+				<p className="text-center leading-normal text-2xl pt-6">
+					私について <span className="text-blue-400">About</span>
 				</p>
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-4 gap-4">
 					{informationList.map((info) => {
@@ -39,22 +37,16 @@ export default function Home() {
 				</div>
 			</main>
 
-			<footer className={styles.footer}>
-				<a
-					href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Powered by{" "}
-					<span className={styles.logo}>
-						<Image
-							src="/vercel.svg"
-							alt="Vercel Logo"
-							width={72}
-							height={16}
-						/>
-					</span>
-				</a>
+			<footer className="w-screen border-b-2 border-green-500">
+				<div className="mx-auto px-6">
+					<div className="border-t-2 border-gray-300 flex flex-col items-center">
+						<div className="sm:w-2/3 text-center py-6">
+							<p className="text-sm text-green-500 font-bold mb-2">
+								© 2021 by Takana Mayo
+							</p>
+						</div>
+					</div>
+				</div>
 			</footer>
 		</div>
 	);
