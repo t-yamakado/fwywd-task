@@ -4,7 +4,7 @@ import { informationList } from "../definitions/commonDefinitions";
 
 export default function Home() {
 	return (
-		<div className="min-h-screen px-2 flex flex-col justify-center items-center h-screen">
+		<div className="min-h-screen px-2 flex flex-col justify-center items-center">
 			<Head>
 				<title>Takana Mayo App</title>
 				<meta name="description" content="Welcome to Takana Mayo app" />
