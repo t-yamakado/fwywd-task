@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
+import { InformationCard } from "../components/InformationCard";
+import { informationList } from "../definitions/commonDefinitions";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -27,54 +29,16 @@ export default function Home() {
 					<code className={styles.code}>pages/index.js</code>
 				</p>
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-4 gap-4">
-					<div className="bg-white shadow p-3 rounded lg:w-64">
-						<div>
-							<div
-								style={{ backgroundImage: `url('')` }}
-								className="bg-cover bg-center bg-gray-300 h-32 rounded"
-							></div>
-						</div>
-						<div className="mt-6">
-							<p className="text-lg text-bold tracking-wide text-gray-600 mb-2">
-								趣味
-							</p>
-							<p className="text-sm text-gray-600 font-hairline">
-								ここに趣味のことについて書きたいね。
-							</p>
-						</div>
-					</div>
-					<div className="bg-white shadow p-3 rounded lg:w-64">
-						<div>
-							<div
-								style={{ backgroundImage: `url('')` }}
-								className="bg-cover bg-center bg-gray-300 h-32 rounded"
-							></div>
-						</div>
-						<div className="mt-6">
-							<p className="text-lg text-bold tracking-wide text-gray-600 mb-2">
-								好きな食べ物
-							</p>
-							<p className="text-sm text-gray-600 font-hairline">
-								ここに食べ物のことについて書きたいね。
-							</p>
-						</div>
-					</div>
-					<div className="bg-white shadow p-3 rounded lg:w-64">
-						<div>
-							<div
-								style={{ backgroundImage: `url('')` }}
-								className="bg-cover bg-center bg-gray-300 h-32 rounded"
-							></div>
-						</div>
-						<div className="mt-6">
-							<p className="text-lg text-bold tracking-wide text-gray-600 mb-2">
-								性格
-							</p>
-							<p className="text-sm text-gray-600 font-hairline">
-								ここに性格のことについて書きたいね。
-							</p>
-						</div>
-					</div>
+					{informationList.map((info) => {
+						return (
+							<InformationCard
+								imageUrl={info.imageUrl}
+								title={info.title}
+								content={info.content}
+								key={info.type}
+							/>
+						);
+					})}
 				</div>
 			</main>
 
