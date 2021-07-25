@@ -18,3 +18,24 @@ export const informationList = [
 		content: "ここに性格のことについて書きたいね。",
 	},
 ];
+
+export const valueList = [
+	{
+		type: "Value01",
+		imageUrl: "/value1.png",
+		title: "価値観その1",
+		content: "ここに価値観のことについて書きたいね。",
+	},
+	{
+		type: "Value02",
+		imageUrl: "/value2.png",
+		title: "価値観その2",
+		content: "ここに価値観のことについて書きたいね。",
+	},
+	{
+		type: "Value03",
+		imageUrl: "/value3.png",
+		title: "価値観その3",
+		content: "ここに価値観のことについて書きたいね。",
+	},
+];

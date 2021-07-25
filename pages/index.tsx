@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { InformationCard } from "../components/InformationCard";
 import { SkillSet } from "../components/SkillSet";
-import { informationList } from "../definitions/commonDefinitions";
+import { informationList, valueList } from "../definitions/commonDefinitions";
 
 export default function Home() {
 	return (
@@ -45,6 +45,37 @@ export default function Home() {
 						}}
 					></div>
 					<SkillSet />
+				</div>
+				<p className="text-center leading-normal text-2xl pt-6">
+					価値観 <span className="text-blue-400">VALUES</span>
+				</p>
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-4 gap-4">
+					{valueList.map((info) => {
+						return (
+							<InformationCard
+								imageUrl={info.imageUrl}
+								title={info.title}
+								content={info.content}
+								key={info.type}
+							/>
+						);
+					})}
+				</div>
+				<p className="text-center leading-normal text-2xl pt-6">
+					３年後にやりたいこと{" "}
+					<span className="text-blue-400">FUTURE</span>
+				</p>
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 p-4 gap-4">
+					<div>
+						<p>ここにテキスト</p>
+					</div>
+					<div
+						style={{
+							backgroundImage: `url(./future.png)`,
+							backgroundRepeat: "no-repeat",
+							backgroundSize: "contain",
+						}}
+					></div>
 				</div>
 			</main>
 
