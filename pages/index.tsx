@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import { InformationCard } from "../components/InformationCard";
 import { SkillSet } from "../components/SkillSet";
 import { informationList, valueList } from "../definitions/commonDefinitions";
@@ -24,7 +25,10 @@ export default function Home() {
 						</div>
 						<div className="pl-80">
 							{/* FIXME: paddingで位置調整しているので、動的に右寄せにする */}
-							<img src="./hero.png" />
+							<Image
+								src={require("../public/hero.png")}
+								alt="hero image"
+							/>
 						</div>
 					</div>
 				</div>
