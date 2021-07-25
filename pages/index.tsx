@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { InformationCard } from "../components/InformationCard";
+import { SkillSet } from "../components/SkillSet";
 import { informationList } from "../definitions/commonDefinitions";
 
 export default function Home() {
@@ -18,7 +19,7 @@ export default function Home() {
 				</h1>
 
 				<p className="text-center leading-normal text-2xl pt-6">
-					私について <span className="text-blue-400">About</span>
+					私について <span className="text-blue-400">ABOUT</span>
 				</p>
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-4 gap-4">
 					{informationList.map((info) => {
@@ -31,6 +32,19 @@ export default function Home() {
 							/>
 						);
 					})}
+				</div>
+				<p className="text-center leading-normal text-2xl pt-6">
+					スキル <span className="text-blue-400">SKILLS</span>
+				</p>
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 p-4 gap-4 w-full">
+					<div
+						style={{
+							backgroundImage: `url(./skill.png)`,
+							backgroundRepeat: "no-repeat",
+							backgroundSize: "contain",
+						}}
+					></div>
+					<SkillSet />
 				</div>
 			</main>
 
