@@ -6,16 +6,30 @@ import { informationList, valueList } from "../definitions/commonDefinitions";
 export default function Home() {
 	return (
 		<body>
+			<Head>
+				<title>Takana Mayo App</title>
+				<meta name="description" content="Welcome to Takana Mayo app" />
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
+			<header>
+				<div className="w-full bg-cover bg-center">
+					<div className="flex items-center justify-left h-full w-full bg-green-700 bg-opacity-60">
+						<div className="text-left inline-block">
+							<h1 className="text-white text-2xl font-semibold uppercase md:text-3xl pl-20">
+								Main title
+							</h1>
+							<h2 className="text-white text-xl font-semibold uppercase md:text-2xl pl-20 text-opacity-70">
+								Sub title
+							</h2>
+						</div>
+						<div className="pl-80">
+							{/* FIXME: paddingで位置調整しているので、動的に右寄せにする */}
+							<img src="./hero.png" />
+						</div>
+					</div>
+				</div>
+			</header>
 			<div className="min-h-screen px-2 flex flex-col justify-center items-center">
-				<Head>
-					<title>Takana Mayo App</title>
-					<meta
-						name="description"
-						content="Welcome to Takana Mayo app"
-					/>
-					<link rel="icon" href="/favicon.ico" />
-				</Head>
-
 				<main className="py-20 flex-1 flex flex-col justify-center items-center">
 					<h1 className="text-center text-6xl">
 						Welcome to{" "}
