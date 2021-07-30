@@ -104,14 +104,14 @@ export default function Home() {
 					<p className="text-center leading-normal text-2xl pt-6">
 						スキル <span className="text-blue-400">SKILLS</span>
 					</p>
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 p-4 gap-4 w-full">
-						<div
-							style={{
-								backgroundImage: `url(./skill.png)`,
-								backgroundRepeat: "no-repeat",
-								backgroundSize: "contain",
-							}}
-						></div>
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 p-4 gap-4 w-2/3">
+						<div>
+							<Image
+								src={require("../public/skill.png")}
+								alt="skill image"
+								className="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-white hover:border-transparent hover:text-teal mt-4 lg:mt-0"
+							/>
+						</div>
 						<SkillSet />
 					</div>
 					<p className="text-center leading-normal text-2xl pt-6">
@@ -133,7 +133,7 @@ export default function Home() {
 						３年後にやりたいこと{" "}
 						<span className="text-blue-400">FUTURE</span>
 					</p>
-					<div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 p-4 gap-4 w-2/3">
 						<div className="text-sm lg:flex-grow p-4">
 							<div className="text-left inline-block">
 								<div>
