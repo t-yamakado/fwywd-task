@@ -133,17 +133,24 @@ export default function Home() {
 						３年後にやりたいこと{" "}
 						<span className="text-blue-400">FUTURE</span>
 					</p>
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 p-4 gap-4">
-						<div>
-							<p>ここにテキスト</p>
+					<div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+						<div className="text-sm lg:flex-grow p-4">
+							<div className="text-left inline-block">
+								<div>
+									<p>
+										ここにテキストここにテキストここにテキストここにテキストここにテキスト
+										ここにテキストここにテキストここにテキストここにテキストここにテキスト
+									</p>
+								</div>
+							</div>
 						</div>
-						<div
-							style={{
-								backgroundImage: `url(./future.png)`,
-								backgroundRepeat: "no-repeat",
-								backgroundSize: "contain",
-							}}
-						></div>
+						<div>
+							<Image
+								src={require("../public/future.png")}
+								alt="future image"
+								className="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-white hover:border-transparent hover:text-teal mt-4 lg:mt-0"
+							/>
+						</div>
 					</div>
 				</main>
 
