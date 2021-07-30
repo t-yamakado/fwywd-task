@@ -1,16 +1,19 @@
 import React from "react";
+import Image from "next/image";
 
 export const InformationCard: React.FC<{
 	imageUrl: string;
 	title: string;
 	content: string;
 }> = ({ imageUrl, title, content }) => (
-	<div className="bg-white shadow p-3 rounded lg:w-64">
+	<div>
 		<div>
-			<div
-				style={{ backgroundImage: `url(${imageUrl})` }}
-				className="bg-cover bg-center bg-gray-300 h-32 rounded"
-			></div>
+			<div className="ml-8 p-3">
+				<Image
+					src={require(`../public/${imageUrl}`)}
+					alt="skill image"
+				/>
+			</div>
 		</div>
 		<div className="mt-6">
 			<p className="text-lg text-bold tracking-wide text-gray-600 mb-2">
