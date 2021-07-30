@@ -13,8 +13,54 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<header>
-				<div className="w-full bg-cover bg-center">
-					<div className="flex items-center justify-left h-full w-full bg-green-700 bg-opacity-60">
+				<nav className="flex items-center justify-between flex-wrap bg-teal p-6">
+					<div className="flex items-center flex-no-shrink text-white mr-6">
+						<svg
+							className="h-8 w-8 mr-2"
+							width="54"
+							height="54"
+							viewBox="0 0 54 54"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
+						</svg>
+						<span className="font-semibold text-xl tracking-tight text-black">
+							Tailwind CSS
+						</span>
+					</div>
+					<div className="w-full block lg:flex lg:items-center lg:w-auto">
+						<div className="text-sm lg:flex-grow">
+							<a
+								href="#responsive-header"
+								className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4"
+							>
+								ABOUT
+							</a>
+							<a
+								href="#responsive-header"
+								className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4"
+							>
+								SKILLS
+							</a>
+							<a
+								href="#responsive-header"
+								className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4"
+							>
+								VALUES
+							</a>
+							<a
+								href="#responsive-header"
+								className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white"
+							>
+								FUTURE
+							</a>
+						</div>
+					</div>
+				</nav>
+			</header>
+			<nav className="flex items-center justify-between flex-wrap bg-teal p-6 bg-green-700 bg-opacity-60">
+				<div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+					<div className="text-sm lg:flex-grow">
 						<div className="text-left inline-block">
 							<h1 className="text-white text-2xl font-semibold uppercase md:text-3xl pl-20">
 								Main title
@@ -23,16 +69,16 @@ export default function Home() {
 								Sub title
 							</h2>
 						</div>
-						<div className="pl-80">
-							{/* FIXME: paddingで位置調整しているので、動的に右寄せにする */}
-							<Image
-								src={require("../public/hero.png")}
-								alt="hero image"
-							/>
-						</div>
+					</div>
+					<div>
+						<Image
+							src={require("../public/hero.png")}
+							alt="hero image"
+							className="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-white hover:border-transparent hover:text-teal mt-4 lg:mt-0"
+						/>
 					</div>
 				</div>
-			</header>
+			</nav>
 			<div className="min-h-screen px-2 flex flex-col justify-center items-center">
 				<main className="py-20 flex-1 flex flex-col justify-center items-center">
 					<h1 className="text-center text-6xl">
@@ -58,14 +104,14 @@ export default function Home() {
 					<p className="text-center leading-normal text-2xl pt-6">
 						スキル <span className="text-blue-400">SKILLS</span>
 					</p>
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 p-4 gap-4 w-full">
-						<div
-							style={{
-								backgroundImage: `url(./skill.png)`,
-								backgroundRepeat: "no-repeat",
-								backgroundSize: "contain",
-							}}
-						></div>
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 p-4 gap-4 w-2/3">
+						<div>
+							<Image
+								src={require("../public/skill.png")}
+								alt="skill image"
+								className="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-white hover:border-transparent hover:text-teal mt-4 lg:mt-0"
+							/>
+						</div>
 						<SkillSet />
 					</div>
 					<p className="text-center leading-normal text-2xl pt-6">
@@ -87,17 +133,24 @@ export default function Home() {
 						３年後にやりたいこと{" "}
 						<span className="text-blue-400">FUTURE</span>
 					</p>
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 p-4 gap-4">
-						<div>
-							<p>ここにテキスト</p>
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 p-4 gap-4 w-2/3">
+						<div className="text-sm lg:flex-grow p-4">
+							<div className="text-left inline-block">
+								<div>
+									<p>
+										ここにテキストここにテキストここにテキストここにテキストここにテキスト
+										ここにテキストここにテキストここにテキストここにテキストここにテキスト
+									</p>
+								</div>
+							</div>
 						</div>
-						<div
-							style={{
-								backgroundImage: `url(./future.png)`,
-								backgroundRepeat: "no-repeat",
-								backgroundSize: "contain",
-							}}
-						></div>
+						<div>
+							<Image
+								src={require("../public/future.png")}
+								alt="future image"
+								className="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-white hover:border-transparent hover:text-teal mt-4 lg:mt-0"
+							/>
+						</div>
 					</div>
 				</main>
 
