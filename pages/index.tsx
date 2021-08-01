@@ -99,7 +99,7 @@ export default function Home() {
 							私について{" "}
 							<span className="text-blue-400">ABOUT</span>
 						</p>
-						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-4 gap-4">
+						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-4">
 							{informationList.map((info) => {
 								return (
 									<InformationCard
@@ -152,38 +152,41 @@ export default function Home() {
 							})}
 						</div>
 					</div>
-					<div
-						className="pt-32 -top-10 relative z-0"
-						style={{
-							backgroundImage: "url(/bg-future.png)",
-							backgroundRepeat: "no-repeat",
-							backgroundAttachment: "local",
-							backgroundSize: "100%",
-						}}
-					>
-						<p className="text-center leading-normal text-2xl pt-6">
-							３年後にやりたいこと{" "}
-							<span className="text-blue-400">FUTURE</span>
-						</p>
-						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 p-4 gap-4 w-2/3">
-							<div className="text-sm lg:flex-grow p-4">
-								<div className="text-left inline-block">
-									<div>
-										<p>
+					<section className="overflow-hidden relative -top-10">
+						<div
+							className="pt-32 relative z-0"
+							style={{
+								backgroundImage: "url(/bg-future.png)",
+								backgroundRepeat: "no-repeat",
+								backgroundAttachment: "local",
+								backgroundSize: "100%",
+							}}
+						>
+							<div className="container px-5 py-24 mx-auto">
+								<div className="lg:w-4/5 mx-auto flex flex-wrap">
+									<div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+										<h1 className="text-2xl title-font font-medium mb-1">
+											３年後にやりたいこと{" "}
+											<span className="text-base text-blue-400">
+												FUTURE
+											</span>
+										</h1>
+										<p className="leading-relaxed pr-5">
+											ここにテキストここにテキストここにテキストここにテキストここにテキスト
 											ここにテキストここにテキストここにテキストここにテキストここにテキスト
 											ここにテキストここにテキストここにテキストここにテキストここにテキスト
 										</p>
 									</div>
+									<div className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded">
+										<Image
+											src={require("../public/future.png")}
+											alt="future image"
+										/>
+									</div>
 								</div>
 							</div>
-							<div>
-								<Image
-									src={require("../public/future.png")}
-									alt="future image"
-								/>
-							</div>
 						</div>
-					</div>
+					</section>
 				</main>
 				<Share
 					text="profile page"
