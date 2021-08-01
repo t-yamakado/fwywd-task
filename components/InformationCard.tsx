@@ -7,16 +7,11 @@ export const InformationCard: React.FC<{
 	content: string;
 }> = ({ imageUrl, title, content }) => (
 	<div>
-		<div>
-			<div className="p-4">
-				<Image
-					src={require(`../public/${imageUrl}`)}
-					alt={`${imageUrl}`}
-				/>
-			</div>
+		<div className="text-center">
+			<Image src={require(`../public/${imageUrl}`)} alt={`${imageUrl}`} />
 		</div>
-		<div className="mt-6">
-			<p className="text-lg text-bold tracking-wide text-gray-600 mb-2">
+		<div className="mt-6 p-4">
+			<p className="text-lg text-center text-bold tracking-wide text-gray-600 mb-2">
 				{title}
 			</p>
 			<p className="text-sm text-gray-600 font-hairline">{content}</p>
