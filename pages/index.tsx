@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { InformationCard } from "../components/InformationCard";
 import { SkillSet } from "../components/SkillSet";
+import { Share } from "../components/Share";
 import { informationList, valueList } from "../definitions/commonDefinitions";
 
 export default function Home() {
@@ -184,7 +185,10 @@ export default function Home() {
 						</div>
 					</div>
 				</main>
-
+				<Share
+					text="profile page"
+					url="https://fwywd-task.vercel.app/"
+				/>
 				<footer className="w-screen border-b-2 border-green-500">
 					<div className="mx-auto px-6">
 						<div className="border-t-2 border-gray-300 flex flex-col items-center">
