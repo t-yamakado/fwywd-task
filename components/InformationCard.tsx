@@ -8,10 +8,10 @@ export const InformationCard: React.FC<{
 }> = ({ imageUrl, title, content }) => (
 	<div>
 		<div>
-			<div className="ml-8 p-3">
+			<div className="p-4">
 				<Image
 					src={require(`../public/${imageUrl}`)}
-					alt="skill image"
+					alt={`${imageUrl}`}
 				/>
 			</div>
 		</div>

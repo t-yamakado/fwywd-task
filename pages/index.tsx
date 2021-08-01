@@ -79,77 +79,108 @@ export default function Home() {
 					</div>
 				</div>
 			</nav>
-			<div className="min-h-screen px-2 flex flex-col justify-center items-center">
-				<main className="py-20 flex-1 flex flex-col justify-center items-center">
+			<div className="">
+				<main className="py-20 flex-1">
 					<h1 className="text-center text-6xl">
 						Welcome to{" "}
 						<span className="text-green-500">Takana Mayo Page</span>
 					</h1>
-
-					<p className="text-center leading-normal text-2xl pt-6">
-						私について <span className="text-blue-400">ABOUT</span>
-					</p>
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-4 gap-4">
-						{informationList.map((info) => {
-							return (
-								<InformationCard
-									imageUrl={info.imageUrl}
-									title={info.title}
-									content={info.content}
-									key={info.type}
-								/>
-							);
-						})}
-					</div>
-					<p className="text-center leading-normal text-2xl pt-6">
-						スキル <span className="text-blue-400">SKILLS</span>
-					</p>
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 p-4 gap-4 w-2/3">
-						<div>
-							<Image
-								src={require("../public/skill.png")}
-								alt="skill image"
-								className="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-white hover:border-transparent hover:text-teal mt-4 lg:mt-0"
-							/>
+					<div
+						className="py-20"
+						style={{
+							backgroundImage: "url(/bg-about.png)",
+							backgroundRepeat: "no-repeat",
+							backgroundAttachment: "local",
+							backgroundSize: "100%",
+						}}
+					>
+						<p className="text-center leading-normal text-2xl pt-6">
+							私について{" "}
+							<span className="text-blue-400">ABOUT</span>
+						</p>
+						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-4 gap-4">
+							{informationList.map((info) => {
+								return (
+									<InformationCard
+										imageUrl={info.imageUrl}
+										title={info.title}
+										content={info.content}
+										key={info.type}
+									/>
+								);
+							})}
 						</div>
-						<SkillSet />
 					</div>
-					<p className="text-center leading-normal text-2xl pt-6">
-						価値観 <span className="text-blue-400">VALUES</span>
-					</p>
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-4 gap-4">
-						{valueList.map((info) => {
-							return (
-								<InformationCard
-									imageUrl={info.imageUrl}
-									title={info.title}
-									content={info.content}
-									key={info.type}
+					<div
+						className="py-20 relative bottom-20"
+						style={{
+							backgroundImage: "url(/bg-skills.png)",
+							backgroundRepeat: "no-repeat",
+							backgroundAttachment: "local",
+							backgroundSize: "100%",
+						}}
+					>
+						<p className="text-center leading-normal text-2xl pt-6">
+							スキル <span className="text-blue-400">SKILLS</span>
+						</p>
+						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 p-4 gap-4 w-2/3">
+							<div>
+								<Image
+									src={require("../public/skill.png")}
+									alt="skill image"
+									className="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-white hover:border-transparent hover:text-teal mt-4 lg:mt-0"
 								/>
-							);
-						})}
+							</div>
+							<SkillSet />
+						</div>
 					</div>
-					<p className="text-center leading-normal text-2xl pt-6">
-						３年後にやりたいこと{" "}
-						<span className="text-blue-400">FUTURE</span>
-					</p>
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 p-4 gap-4 w-2/3">
-						<div className="text-sm lg:flex-grow p-4">
-							<div className="text-left inline-block">
-								<div>
-									<p>
-										ここにテキストここにテキストここにテキストここにテキストここにテキスト
-										ここにテキストここにテキストここにテキストここにテキストここにテキスト
-									</p>
+					<div className="relative z-10">
+						<p className="text-center leading-normal text-2xl pt-6">
+							価値観 <span className="text-blue-400">VALUES</span>
+						</p>
+						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-4 gap-4">
+							{valueList.map((info) => {
+								return (
+									<InformationCard
+										imageUrl={info.imageUrl}
+										title={info.title}
+										content={info.content}
+										key={info.type}
+									/>
+								);
+							})}
+						</div>
+					</div>
+					<div
+						className="pt-32 -top-10 relative z-0"
+						style={{
+							backgroundImage: "url(/bg-future.png)",
+							backgroundRepeat: "no-repeat",
+							backgroundAttachment: "local",
+							backgroundSize: "100%",
+						}}
+					>
+						<p className="text-center leading-normal text-2xl pt-6">
+							３年後にやりたいこと{" "}
+							<span className="text-blue-400">FUTURE</span>
+						</p>
+						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 p-4 gap-4 w-2/3">
+							<div className="text-sm lg:flex-grow p-4">
+								<div className="text-left inline-block">
+									<div>
+										<p>
+											ここにテキストここにテキストここにテキストここにテキストここにテキスト
+											ここにテキストここにテキストここにテキストここにテキストここにテキスト
+										</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div>
-							<Image
-								src={require("../public/future.png")}
-								alt="future image"
-								className="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-white hover:border-transparent hover:text-teal mt-4 lg:mt-0"
-							/>
+							<div>
+								<Image
+									src={require("../public/future.png")}
+									alt="future image"
+								/>
+							</div>
 						</div>
 					</div>
 				</main>
