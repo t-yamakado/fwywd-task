@@ -64,10 +64,10 @@ export default function Home() {
 					<div className="text-sm lg:flex-grow">
 						<div className="text-left inline-block">
 							<h1 className="text-white text-2xl font-semibold uppercase md:text-3xl pl-20">
-								Main title
+								Takana Mayo Page
 							</h1>
 							<h2 className="text-white text-xl font-semibold uppercase md:text-2xl pl-20 text-opacity-70">
-								Sub title
+								Welcome
 							</h2>
 						</div>
 					</div>
@@ -81,38 +81,41 @@ export default function Home() {
 				</div>
 			</nav>
 			<div className="">
-				<main className="pt-20 flex-1">
-					<h1 className="text-center text-6xl">
-						Welcome to{" "}
-						<span className="text-green-500">Takana Mayo Page</span>
-					</h1>
-					<div
-						className="py-20"
-						style={{
-							backgroundImage: "url(/bg-about.png)",
-							backgroundRepeat: "no-repeat",
-							backgroundAttachment: "local",
-							backgroundSize: "100%",
-						}}
-					>
-						<p className="text-center leading-normal text-2xl pt-6">
-							私について{" "}
-							<span className="text-blue-400">ABOUT</span>
-						</p>
-						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-4">
-							{informationList.map((info) => {
-								return (
-									<InformationCard
-										imageUrl={info.imageUrl}
-										title={info.title}
-										content={info.content}
-										key={info.type}
-									/>
-								);
-							})}
-						</div>
-					</div>
+				<main className="flex-1">
 					<section className="overflow-hidden">
+						<div
+							style={{
+								backgroundImage: "url(/bg-about.png)",
+								backgroundRepeat: "no-repeat",
+								backgroundAttachment: "local",
+								backgroundSize: "100%",
+							}}
+						>
+							<div className="container px-5 mx-auto pt-10">
+								<h1 className="text-2xl text-center title-font font-medium">
+									私について{" "}
+									<span className="text-base text-blue-400">
+										ABOUT
+									</span>
+								</h1>
+								<div className="lg:w-4/5 mx-auto flex flex-wrap">
+									<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-10 mb-24">
+										{informationList.map((info) => {
+											return (
+												<InformationCard
+													imageUrl={info.imageUrl}
+													title={info.title}
+													content={info.content}
+													key={info.type}
+												/>
+											);
+										})}
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section className="overflow-hidden relative -top-16">
 						<div
 							style={{
 								backgroundImage: "url(/bg-skills.png)",
@@ -149,7 +152,7 @@ export default function Home() {
 							</div>
 						</div>
 					</section>
-					<section className="overflow-hidden relative -top-10 z-10">
+					<section className="overflow-hidden relative z-10">
 						<div className="container px-5 mx-auto">
 							<h1 className="text-2xl text-center title-font font-medium mb-1">
 								価値観{" "}
@@ -157,21 +160,23 @@ export default function Home() {
 									VALUES
 								</span>
 							</h1>
-							<div className="divide-x-0 sm:divide-x-0 lg:divide-x-2 divide-green-500 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-10">
-								{valueList.map((info) => {
-									return (
-										<InformationCard
-											imageUrl={info.imageUrl}
-											title={info.title}
-											content={info.content}
-											key={info.type}
-										/>
-									);
-								})}
+							<div className="lg:w-4/5 mx-auto flex flex-wrap">
+								<div className="divide-x-0 sm:divide-x-0 lg:divide-x-2 divide-green-500 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-10">
+									{valueList.map((info) => {
+										return (
+											<InformationCard
+												imageUrl={info.imageUrl}
+												title={info.title}
+												content={info.content}
+												key={info.type}
+											/>
+										);
+									})}
+								</div>
 							</div>
 						</div>
 					</section>
-					<section className="overflow-hidden relative -top-32">
+					<section className="overflow-hidden relative -top-20">
 						<div
 							className="pt-32 relative z-0"
 							style={{
