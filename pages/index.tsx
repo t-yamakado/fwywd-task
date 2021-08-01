@@ -135,23 +135,28 @@ export default function Home() {
 							<SkillSet />
 						</div>
 					</div>
-					<div className="relative z-10">
-						<p className="text-center leading-normal text-2xl pt-6">
-							価値観 <span className="text-blue-400">VALUES</span>
-						</p>
-						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-4 gap-4">
-							{valueList.map((info) => {
-								return (
-									<InformationCard
-										imageUrl={info.imageUrl}
-										title={info.title}
-										content={info.content}
-										key={info.type}
-									/>
-								);
-							})}
+					<section className="overflow-hidden relative -top-10">
+						<div className="container px-5 py-24 mx-auto">
+							<h1 className="text-2xl text-center title-font font-medium mb-1">
+								価値観{" "}
+								<span className="text-base text-blue-400">
+									VALUES
+								</span>
+							</h1>
+							<div className="divide-x-2 divide-green-500 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-10">
+								{valueList.map((info) => {
+									return (
+										<InformationCard
+											imageUrl={info.imageUrl}
+											title={info.title}
+											content={info.content}
+											key={info.type}
+										/>
+									);
+								})}
+							</div>
 						</div>
-					</div>
+					</section>
 					<section className="overflow-hidden relative -top-10">
 						<div
 							className="pt-32 relative z-0"
