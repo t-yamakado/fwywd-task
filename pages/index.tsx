@@ -81,7 +81,7 @@ export default function Home() {
 				</div>
 			</nav>
 			<div className="">
-				<main className="py-20 flex-1">
+				<main className="pt-20 flex-1">
 					<h1 className="text-center text-6xl">
 						Welcome to{" "}
 						<span className="text-green-500">Takana Mayo Page</span>
@@ -112,38 +112,52 @@ export default function Home() {
 							})}
 						</div>
 					</div>
-					<div
-						className="py-20 relative bottom-20"
-						style={{
-							backgroundImage: "url(/bg-skills.png)",
-							backgroundRepeat: "no-repeat",
-							backgroundAttachment: "local",
-							backgroundSize: "100%",
-						}}
-					>
-						<p className="text-center leading-normal text-2xl pt-6">
-							スキル <span className="text-blue-400">SKILLS</span>
-						</p>
-						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 p-4 gap-4 w-2/3">
-							<div>
-								<Image
-									src={require("../public/skill.png")}
-									alt="skill image"
-									className="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-white hover:border-transparent hover:text-teal mt-4 lg:mt-0"
-								/>
+					<section className="overflow-hidden">
+						<div
+							style={{
+								backgroundImage: "url(/bg-skills.png)",
+								backgroundRepeat: "no-repeat",
+								backgroundAttachment: "local",
+								backgroundSize: "100%",
+							}}
+						>
+							<div className="container px-5 py-24 pt-10 mx-auto">
+								<div className="lg:w-4/5 mx-auto flex flex-wrap">
+									<div className="w-full lg:w-1/2 lg:h-auto">
+										{/* NOTE: 下のDOMに合わせて文言を配置するために空の要素を入れている */}
+									</div>
+									<div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+										<h1 className="text-2xl title-font font-medium mb-1">
+											スキル{" "}
+											<span className="text-base text-blue-400">
+												SKILL
+											</span>
+										</h1>
+									</div>
+								</div>
+								<div className="lg:w-4/5 mx-auto flex flex-wrap">
+									<div className="lg:w-1/2 w-full lg:h-auto h-auto object-cover object-center rounded">
+										<Image
+											src={require("../public/skill.png")}
+											alt="skill image"
+										/>
+									</div>
+									<div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:-mt-5">
+										<SkillSet />
+									</div>
+								</div>
 							</div>
-							<SkillSet />
 						</div>
-					</div>
-					<section className="overflow-hidden relative -top-10">
-						<div className="container px-5 py-24 mx-auto">
+					</section>
+					<section className="overflow-hidden relative -top-10 z-10">
+						<div className="container px-5 mx-auto">
 							<h1 className="text-2xl text-center title-font font-medium mb-1">
 								価値観{" "}
 								<span className="text-base text-blue-400">
 									VALUES
 								</span>
 							</h1>
-							<div className="divide-x-2 divide-green-500 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-10">
+							<div className="divide-x-0 sm:divide-x-0 lg:divide-x-2 divide-green-500 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-10">
 								{valueList.map((info) => {
 									return (
 										<InformationCard
@@ -157,7 +171,7 @@ export default function Home() {
 							</div>
 						</div>
 					</section>
-					<section className="overflow-hidden relative -top-10">
+					<section className="overflow-hidden relative -top-32">
 						<div
 							className="pt-32 relative z-0"
 							style={{
@@ -167,7 +181,7 @@ export default function Home() {
 								backgroundSize: "100%",
 							}}
 						>
-							<div className="container px-5 py-24 mx-auto">
+							<div className="container px-5 mx-auto">
 								<div className="lg:w-4/5 mx-auto flex flex-wrap">
 									<div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
 										<h1 className="text-2xl title-font font-medium mb-1">
