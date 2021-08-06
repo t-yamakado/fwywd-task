@@ -4,7 +4,7 @@ export const informationList = [
 		imageUrl: "about-1.png",
 		title: "趣味",
 		content:
-			"SampleTextSampleTextSampleTextSampleTextSampleTextSampleTextSampleText",
+			"ここにテキストここにテキストここにテキストここにテキストここにテキストここにテキスト",
 	},
 	{
 		type: "Food",
