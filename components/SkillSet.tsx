@@ -33,7 +33,7 @@ export const SkillSet: React.VFC<{}> = ({}) => (
 		<div className="mt-1 ml-10 sm:ml-10 h-3 relative w-60 rounded-full overflow-hidden">
 			<div className=" w-full h-full bg-gray-200 absolute "></div>
 			<div
-				className=" h-full bg-green-500 sm:bg-red-500 absolute"
+				className=" h-full bg-red-500 sm:bg-red-500 absolute"
 				style={{ width: "50%" }}
 			></div>
 		</div>
@@ -43,7 +43,7 @@ export const SkillSet: React.VFC<{}> = ({}) => (
 		<div className="mt-1 ml-10 sm:ml-10 h-3 relative w-60 rounded-full overflow-hidden">
 			<div className=" w-full h-full bg-gray-200 absolute "></div>
 			<div
-				className=" h-full bg-gray-600 sm:bg-indigo-500 absolute"
+				className=" h-full bg-indigo-500 sm:bg-indigo-500 absolute"
 				style={{ width: "30%" }}
 			></div>
 		</div>
