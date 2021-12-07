@@ -9,8 +9,8 @@ export default function Home() {
 	return (
 		<body>
 			<Head>
-				<title>Takana Mayo App</title>
-				<meta name="description" content="Welcome to Takana Mayo app" />
+				<title>T-Yamakado App</title>
+				<meta name="description" content="Welcome to T-Yamakado app" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Header />

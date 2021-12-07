@@ -7,7 +7,7 @@ export const Navigation: React.VFC<{}> = () => (
 			<div className="text-sm lg:flex-grow">
 				<div className="text-left inline-block">
 					<h1 className="text-white text-2xl font-semibold uppercase md:text-3xl pl-20">
-						Takana Mayo Page
+						T-Yamakado Page
 					</h1>
 					<h2 className="text-white text-xl font-semibold uppercase md:text-2xl pl-20 text-opacity-70">
 						Welcome
